@@ -15,3 +15,9 @@ with a duplicate acknowledgement.
 
 The current receiver runs in receipt-only mode; it does not analyze code or post
 comments. This fixture is intended for the test fork and does not need to merge.
+
+## Follow-up commit
+
+Pushing this update to the open pull request tests delivery of both a `push` event
+and a `pull_request` event with action `synchronize`. Each should return HTTP 202
+and record its own delivery receipt. No bot comment is expected in receipt-only mode.
